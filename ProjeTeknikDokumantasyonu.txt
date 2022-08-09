@@ -1,0 +1,17 @@
+1=> Proje N-Tier mimari paternine gore yazilacaktir.
+
+2=> Projede acilacak katmanlar
+Entities,
+Map,
+Dal,
+BLL,
+Common(Ortak kullanilacak siniflarin tutulacagi katman),
+API UI(Projemizi disari acmak istedigimiz icin actigimiz ayri bir katmandir),
+DTO(Api daki esnekligimizin proje bazli artmasi icin acacagimiz katmandir),
+UI(MVC)
+
+3 => Projede degisken isimleri degiskenler local variable oldugu surece camelCase, field oldugu surece basinda _ sembolu olmak uzere camelCase; Property, metot ve class isimleri PascalCase standartlarinda yazilacaktir ve projede turkce karakter kullanilmayacaktir Class isimleri kesinlikle cogul olmayacatir.
+
+4 => Katman isimleri Project ile baslayarak . sembolunden sonra katmansal takilarla bitecektir(Project.ENTITIES vs..)
+
+5 => Tasarim patternlerinden Generic Repository, Singleton ve Strategy Pattern kesinlikle kullanilacaktir..Mevcut algoritmada ve bu tasarim paternlerinin disinda bir baska Tasarim Paterni ongorulmektedir..Ancak projenin esnekligi buna elverisli oldugu taktirde projenin mimari paterniyle bir cakisma olmadigi taktirde (bu durum ozel olarak istenecek olan bir Arge sureci icerisinde hemen belirlenmek zorundadir) gerekli gorulurse rahatca eklenebilecektir...
