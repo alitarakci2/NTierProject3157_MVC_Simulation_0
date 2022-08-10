@@ -7,14 +7,22 @@
     <meta name="author" content="Mosaddek">
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.png">
-    <title>FlatLab - Flat & Responsive Bootstrap Admin Template</title>
+
+    <title>Advanced Table</title>
+
     <!-- Bootstrap core CSS -->
     <link href="~/OuterTools/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/OuterTools/css/bootstrap-reset.css" rel="stylesheet">
     <!--external css-->
     <link href="~/OuterTools/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="~/OuterTools/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
-    <link rel="stylesheet" href="~/OuterTools/css/owl.carousel.css" type="text/css">
+
+    <link href="~/OuterTools/assets/advanced-datatable/media/css/demo_page.css" rel="stylesheet" />
+    <link href="~/OuterTools/assets/advanced-datatable/media/css/demo_table.css" rel="stylesheet" />
+
+
+
+
+
     <!-- Custom styles for this template -->
     <link href="~/OuterTools/css/style.css" rel="stylesheet">
     <link href="~/OuterTools/css/style-responsive.css" rel="stylesheet" />
@@ -28,7 +36,7 @@
 
 <body>
 
-    <section id="container">
+    <section id="container" class="">
         <!--header start-->
         <header class="header white-bg">
             <div class="sidebar-toggle-box">
@@ -136,7 +144,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="~/OuterTools/img/avatar-mini.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini.jpg"></span>
                                     <span class="subject">
                                         <span class="from">Jonathan Smith</span>
                                         <span class="time">Just now</span>
@@ -148,7 +156,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="~/OuterTools/img/avatar-mini2.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini2.jpg"></span>
                                     <span class="subject">
                                         <span class="from">Jhon Doe</span>
                                         <span class="time">10 mins</span>
@@ -160,7 +168,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="~/OuterTools/img/avatar-mini3.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini3.jpg"></span>
                                     <span class="subject">
                                         <span class="from">Jason Stathum</span>
                                         <span class="time">3 hrs</span>
@@ -172,7 +180,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="~/OuterTools/img/avatar-mini4.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini4.jpg"></span>
                                     <span class="subject">
                                         <span class="from">Jondi Rose</span>
                                         <span class="time">Just now</span>
@@ -242,10 +250,8 @@
                     </li>
                     <!-- notification dropdown end -->
                 </ul>
-                <!--  notification end -->
             </div>
             <div class="top-nav ">
-                <!--search & user info start-->
                 <ul class="nav pull-right top-menu">
                     <li>
                         <input type="text" class="form-control search" placeholder="Search">
@@ -253,8 +259,8 @@
                     <!-- user login dropdown start-->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <img alt="" src="~/OuterTools/img/avatar1_small.jpg">
-                            <span class="username">Ali indio</span>
+                            <img alt="" src="img/avatar1_small.jpg">
+                            <span class="username">Jhon Doue</span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
@@ -267,7 +273,6 @@
                     </li>
                     <!-- user login dropdown end -->
                 </ul>
-                <!--search & user info end-->
             </div>
         </header>
         <!--header end-->
@@ -277,7 +282,7 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu" id="nav-accordion">
                     <li>
-                        <a class="active" href="index.html">
+                        <a href="index.html">
                             <i class="icon-dashboard"></i>
                             <span>Dashboard</span>
                         </a>
@@ -338,7 +343,7 @@
                         </ul>
                     </li>
                     <li class="sub-menu">
-                        <a href="javascript:;">
+                        <a href="javascript:;" class="active">
                             <i class="icon-th"></i>
                             <span>Data Tables</span>
                         </a>
@@ -346,7 +351,7 @@
                             <li><a href="basic_table.html">Basic Table</a></li>
                             <li><a href="responsive_table.html">Responsive Table</a></li>
                             <li><a href="dynamic_table.html">Dynamic Table</a></li>
-                            <li><a href="advanced_table.html">Advanced Table</a></li>
+                            <li class="active"><a href="advanced_table.html">Advanced Table</a></li>
                             <li><a href="editable_table.html">Editable Table</a></li>
                         </ul>
                     </li>
@@ -440,11 +445,7 @@
         <!--main content start-->
         <section id="main-content">
             <section class="wrapper">
-                
-                @RenderBody();
-               
-
-                
+                @RenderBody()
             </section>
         </section>
         <!--main content end-->
@@ -461,50 +462,78 @@
     </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="~/OuterTools/js/jquery.js"></script>
-    <script src="~/OuterTools/js/jquery-1.8.3.min.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
+    <script type="text/javascript" language="javascript" src="~/OuterTools/assets/advanced-datatable/media/js/jquery.js"></script>
     <script src="~/OuterTools/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="~/OuterTools/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="~/OuterTools/js/jquery.scrollTo.min.js"></script>
     <script src="~/OuterTools/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="~/OuterTools/js/jquery.sparkline.js" type="text/javascript"></script>
-    <script src="~/OuterTools/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
-    <script src="~/OuterTools/js/owl.carousel.js"></script>
-    <script src="~/OuterTools/js/jquery.customSelect.min.js"></script>
     <script src="~/OuterTools/js/respond.min.js"></script>
+    <script type="text/javascript" language="javascript" src="~/OuterTools/assets/advanced-datatable/media/js/jquery.dataTables.js"></script>
 
-    <script class="include" type="text/javascript" src="~/OuterTools/js/jquery.dcjqaccordion.2.7.js"></script>
 
     <!--common script for all pages-->
     <script src="~/OuterTools/js/common-scripts.js"></script>
 
-    <!--script for this page-->
-    <script src="~/OuterTools/js/sparkline-chart.js"></script>
-    <script src="~/OuterTools/js/easy-pie-chart.js"></script>
-    <script src="~/OuterTools/js/count.js"></script>
+    <script type="text/javascript">
+    /* Formating function for row details */
+        function fnFormatDetails(oTable, nTr) {
+            var aData = oTable.fnGetData(nTr);
+            var sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
+            sOut += '<tr><td>Rendering engine:</td><td>' + aData[1] + ' ' + aData[4] + '</td></tr>';
+            sOut += '<tr><td>Link to source:</td><td>Could provide a link here</td></tr>';
+            sOut += '<tr><td>Extra info:</td><td>And any further details here (images etc)</td></tr>';
+            sOut += '</table>';
 
-    <script>
+            return sOut;
+        }
 
-      //owl carousel
+        $(document).ready(function () {
+            /*
+             * Insert a 'details' column to the table
+             */
+            var nCloneTh = document.createElement('th');
+            var nCloneTd = document.createElement('td');
+            nCloneTd.innerHTML = '<img src="/OuterTools/assets/advanced-datatable/examples/examples_support/details_open.png">';
+            nCloneTd.className = "center";
 
-      $(document).ready(function() {
-          $("#owl-demo").owlCarousel({
-              navigation : true,
-              slideSpeed : 300,
-              paginationSpeed : 400,
-              singleItem : true,
-			  autoPlay:true
+            $('#hidden-table-info thead tr').each(function () {
+                this.insertBefore(nCloneTh, this.childNodes[0]);
+            });
 
-          });
-      });
+            $('#hidden-table-info tbody tr').each(function () {
+                this.insertBefore(nCloneTd.cloneNode(true), this.childNodes[0]);
+            });
 
-      //custom select box
+            /*
+             * Initialse DataTables, with no sorting on the 'details' column
+             */
+            var oTable = $('#hidden-table-info').dataTable({
+                "aoColumnDefs": [
+                    { "bSortable": false, "aTargets": [0] }
+                ],
+                "aaSorting": [[1, 'asc']]
+            });
 
-      $(function(){
-          $('select.styled').customSelect();
-      });
+            /* Add event listener for opening and closing details
+             * Note that the indicator for showing which row is open is not controlled by DataTables,
+             * rather it is done here
+             */
+            $('#hidden-table-info tbody td img').live('click', function () {
+                var nTr = $(this).parents('tr')[0];
+                if (oTable.fnIsOpen(nTr)) {
+                    /* This row is already open - close it */
+                    this.src = "/OuterTools/assets/advanced-datatable/examples/examples_support/details_open.png";
+                    oTable.fnClose(nTr);
+                }
+                else {
+                    /* Open this row */
+                    this.src = "/OuterTools/assets/advanced-datatable/examples/examples_support/details_close.png";
+                    oTable.fnOpen(nTr, fnFormatDetails(oTable, nTr), 'details');
+                }
+            });
+        });</script>
 
-    </script>
 
 </body>
 </html>
